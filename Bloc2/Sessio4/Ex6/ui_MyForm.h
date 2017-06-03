@@ -10,6 +10,7 @@
 #define UI_MYFORM_H
 
 #include <MyGLWidget.h>
+#include <MyLabel.h>
 #include <QtCore/QVariant>
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
@@ -32,9 +33,9 @@ QT_BEGIN_NAMESPACE
 class Ui_MyForm
 {
 public:
-    QHBoxLayout *horizontalLayout_3;
+    QHBoxLayout *horizontalLayout_4;
     MyGLWidget *widget;
-    QVBoxLayout *verticalLayout_4;
+    QVBoxLayout *verticalLayout_5;
     QSpacerItem *verticalSpacer_2;
     QGroupBox *groupBox;
     QVBoxLayout *verticalLayout;
@@ -52,6 +53,12 @@ public:
     QHBoxLayout *horizontalLayout_2;
     QDial *dial;
     QDial *dial_2;
+    QVBoxLayout *verticalLayout_4;
+    MyLabel *label_2;
+    QHBoxLayout *horizontalLayout_3;
+    QSpinBox *spinBox_2;
+    QSpinBox *spinBox_3;
+    QSpinBox *spinBox_4;
     QSpacerItem *verticalSpacer;
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer;
@@ -62,8 +69,8 @@ public:
         if (MyForm->objectName().isEmpty())
             MyForm->setObjectName(QStringLiteral("MyForm"));
         MyForm->resize(795, 726);
-        horizontalLayout_3 = new QHBoxLayout(MyForm);
-        horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
+        horizontalLayout_4 = new QHBoxLayout(MyForm);
+        horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
         widget = new MyGLWidget(MyForm);
         widget->setObjectName(QStringLiteral("widget"));
         QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
@@ -72,13 +79,13 @@ public:
         sizePolicy.setHeightForWidth(widget->sizePolicy().hasHeightForWidth());
         widget->setSizePolicy(sizePolicy);
 
-        horizontalLayout_3->addWidget(widget);
+        horizontalLayout_4->addWidget(widget);
 
-        verticalLayout_4 = new QVBoxLayout();
-        verticalLayout_4->setObjectName(QStringLiteral("verticalLayout_4"));
+        verticalLayout_5 = new QVBoxLayout();
+        verticalLayout_5->setObjectName(QStringLiteral("verticalLayout_5"));
         verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        verticalLayout_4->addItem(verticalSpacer_2);
+        verticalLayout_5->addItem(verticalSpacer_2);
 
         groupBox = new QGroupBox(MyForm);
         groupBox->setObjectName(QStringLiteral("groupBox"));
@@ -96,7 +103,7 @@ public:
         verticalLayout->addWidget(radioButton_2);
 
 
-        verticalLayout_4->addWidget(groupBox);
+        verticalLayout_5->addWidget(groupBox);
 
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
@@ -107,7 +114,7 @@ public:
 
         horizontalSlider = new QSlider(MyForm);
         horizontalSlider->setObjectName(QStringLiteral("horizontalSlider"));
-        QSizePolicy sizePolicy1(QSizePolicy::Minimum, QSizePolicy::Fixed);
+        QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Fixed);
         sizePolicy1.setHorizontalStretch(0);
         sizePolicy1.setVerticalStretch(0);
         sizePolicy1.setHeightForWidth(horizontalSlider->sizePolicy().hasHeightForWidth());
@@ -133,15 +140,10 @@ public:
         verticalLayout_2->addWidget(spinBox);
 
 
-        verticalLayout_4->addLayout(verticalLayout_2);
+        verticalLayout_5->addLayout(verticalLayout_2);
 
         groupBox_2 = new QGroupBox(MyForm);
         groupBox_2->setObjectName(QStringLiteral("groupBox_2"));
-        QSizePolicy sizePolicy3(QSizePolicy::Minimum, QSizePolicy::Preferred);
-        sizePolicy3.setHorizontalStretch(0);
-        sizePolicy3.setVerticalStretch(0);
-        sizePolicy3.setHeightForWidth(groupBox_2->sizePolicy().hasHeightForWidth());
-        groupBox_2->setSizePolicy(sizePolicy3);
         verticalLayout_3 = new QVBoxLayout(groupBox_2);
         verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
         radioButton_3 = new QRadioButton(groupBox_2);
@@ -156,18 +158,21 @@ public:
         verticalLayout_3->addWidget(radioButton_4);
 
 
-        verticalLayout_4->addWidget(groupBox_2);
+        verticalLayout_5->addWidget(groupBox_2);
 
         groupBox_3 = new QGroupBox(MyForm);
         groupBox_3->setObjectName(QStringLiteral("groupBox_3"));
+        QSizePolicy sizePolicy3(QSizePolicy::Minimum, QSizePolicy::Preferred);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
         sizePolicy3.setHeightForWidth(groupBox_3->sizePolicy().hasHeightForWidth());
         groupBox_3->setSizePolicy(sizePolicy3);
         horizontalLayout_2 = new QHBoxLayout(groupBox_3);
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
         dial = new QDial(groupBox_3);
         dial->setObjectName(QStringLiteral("dial"));
-        sizePolicy3.setHeightForWidth(dial->sizePolicy().hasHeightForWidth());
-        dial->setSizePolicy(sizePolicy3);
+        sizePolicy2.setHeightForWidth(dial->sizePolicy().hasHeightForWidth());
+        dial->setSizePolicy(sizePolicy2);
         dial->setMaximum(360);
 
         horizontalLayout_2->addWidget(dial);
@@ -181,11 +186,45 @@ public:
         horizontalLayout_2->addWidget(dial_2);
 
 
-        verticalLayout_4->addWidget(groupBox_3);
+        verticalLayout_5->addWidget(groupBox_3);
+
+        verticalLayout_4 = new QVBoxLayout();
+        verticalLayout_4->setObjectName(QStringLiteral("verticalLayout_4"));
+        label_2 = new MyLabel(MyForm);
+        label_2->setObjectName(QStringLiteral("label_2"));
+        label_2->setAutoFillBackground(true);
+
+        verticalLayout_4->addWidget(label_2);
+
+        horizontalLayout_3 = new QHBoxLayout();
+        horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
+        spinBox_2 = new QSpinBox(MyForm);
+        spinBox_2->setObjectName(QStringLiteral("spinBox_2"));
+        spinBox_2->setMaximum(255);
+
+        horizontalLayout_3->addWidget(spinBox_2);
+
+        spinBox_3 = new QSpinBox(MyForm);
+        spinBox_3->setObjectName(QStringLiteral("spinBox_3"));
+        spinBox_3->setMaximum(255);
+
+        horizontalLayout_3->addWidget(spinBox_3);
+
+        spinBox_4 = new QSpinBox(MyForm);
+        spinBox_4->setObjectName(QStringLiteral("spinBox_4"));
+        spinBox_4->setMaximum(255);
+
+        horizontalLayout_3->addWidget(spinBox_4);
+
+
+        verticalLayout_4->addLayout(horizontalLayout_3);
+
+
+        verticalLayout_5->addLayout(verticalLayout_4);
 
         verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        verticalLayout_4->addItem(verticalSpacer);
+        verticalLayout_5->addItem(verticalSpacer);
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
@@ -201,10 +240,10 @@ public:
         horizontalLayout->addWidget(pushButton);
 
 
-        verticalLayout_4->addLayout(horizontalLayout);
+        verticalLayout_5->addLayout(horizontalLayout);
 
 
-        horizontalLayout_3->addLayout(verticalLayout_4);
+        horizontalLayout_4->addLayout(verticalLayout_5);
 
 
         retranslateUi(MyForm);
@@ -218,9 +257,15 @@ public:
         QObject::connect(radioButton_3, SIGNAL(clicked(bool)), widget, SLOT(repCameraPersp(bool)));
         QObject::connect(radioButton_4, SIGNAL(clicked(bool)), widget, SLOT(repCameraOrt(bool)));
         QObject::connect(dial, SIGNAL(valueChanged(int)), widget, SLOT(repAngleX(int)));
-        QObject::connect(widget, SIGNAL(enviaAngleX(int)), dial, SLOT(setValue(int)));
         QObject::connect(dial_2, SIGNAL(valueChanged(int)), widget, SLOT(repAngleY(int)));
+        QObject::connect(widget, SIGNAL(enviaAngleX(int)), dial, SLOT(setValue(int)));
         QObject::connect(widget, SIGNAL(enviaAngleY(int)), dial_2, SLOT(setValue(int)));
+        QObject::connect(spinBox_2, SIGNAL(valueChanged(int)), label_2, SLOT(setColorR(int)));
+        QObject::connect(spinBox_3, SIGNAL(valueChanged(int)), label_2, SLOT(setColorG(int)));
+        QObject::connect(spinBox_4, SIGNAL(valueChanged(int)), label_2, SLOT(setColorB(int)));
+        QObject::connect(spinBox_2, SIGNAL(valueChanged(int)), widget, SLOT(repColorR(int)));
+        QObject::connect(spinBox_3, SIGNAL(valueChanged(int)), widget, SLOT(repColorG(int)));
+        QObject::connect(spinBox_4, SIGNAL(valueChanged(int)), widget, SLOT(repColorB(int)));
 
         QMetaObject::connectSlotsByName(MyForm);
     } // setupUi
@@ -236,6 +281,7 @@ public:
         radioButton_3->setText(QApplication::translate("MyForm", "Perspectiva", 0));
         radioButton_4->setText(QApplication::translate("MyForm", "Ortogonal", 0));
         groupBox_3->setTitle(QApplication::translate("MyForm", "Angles Euler (X i Y)", 0));
+        label_2->setText(QApplication::translate("MyForm", "Color Terra (R,G,B)", 0));
         pushButton->setText(QApplication::translate("MyForm", "&Sortir", 0));
     } // retranslateUi
 

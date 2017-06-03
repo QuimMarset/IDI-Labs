@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <layout class="QHBoxLayout" name="horizontalLayout_3">
+  <layout class="QHBoxLayout" name="horizontalLayout_4">
    <item>
     <widget class="MyGLWidget" name="widget" native="true">
      <property name="sizePolicy">
@@ -25,7 +25,7 @@
     </widget>
    </item>
    <item>
-    <layout class="QVBoxLayout" name="verticalLayout_4">
+    <layout class="QVBoxLayout" name="verticalLayout_5">
      <item>
       <spacer name="verticalSpacer_2">
        <property name="orientation">
@@ -77,7 +77,7 @@
        <item>
         <widget class="QSlider" name="horizontalSlider">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -119,12 +119,6 @@
      </item>
      <item>
       <widget class="QGroupBox" name="groupBox_2">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
        <property name="title">
         <string>Camera</string>
        </property>
@@ -164,7 +158,7 @@
         <item>
          <widget class="QDial" name="dial">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -189,6 +183,45 @@
         </item>
        </layout>
       </widget>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="MyLabel" name="label_2">
+         <property name="autoFillBackground">
+          <bool>true</bool>
+         </property>
+         <property name="text">
+          <string>Color Terra (R,G,B)</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QSpinBox" name="spinBox_2">
+           <property name="maximum">
+            <number>255</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="spinBox_3">
+           <property name="maximum">
+            <number>255</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="spinBox_4">
+           <property name="maximum">
+            <number>255</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
      </item>
      <item>
       <spacer name="verticalSpacer">
@@ -249,13 +282,8 @@
    <slots>
     <signal>enviaAngleX(int)</signal>
     <signal>enviaAngleY(int)</signal>
-    <slot>repValor(int)</slot>
-    <slot>carregaModelPatricio(bool)</slot>
-    <slot>carregaModelLegoman(bool)</slot>
-    <slot>cameraPerspect(bool)</slot>
-    <slot>cameraOrtog(bool)</slot>
-    <slot>canviaAnglePhi(int)</slot>
-    <slot>canviaAngleTheta(int)</slot>
+    <signal>enviaAnglePhi(int)</signal>
+    <signal>enviaAngleTheta(int)</signal>
     <slot>repAngleZoom(int)</slot>
     <slot>repModelPatr(bool)</slot>
     <slot>repModelLego(bool)</slot>
@@ -263,6 +291,22 @@
     <slot>repCameraOrt(bool)</slot>
     <slot>repAngleX(int)</slot>
     <slot>repAngleY(int)</slot>
+    <slot>repColorR(int)</slot>
+    <slot>repColorG(int)</slot>
+    <slot>repColorB(int)</slot>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>MyLabel</class>
+   <extends>QLabel</extends>
+   <header location="global">MyLabel.h</header>
+   <slots>
+    <slot>setColorR(int)</slot>
+    <slot>setColorG(int)</slot>
+    <slot>setColorB(int)</slot>
+    <slot>canviaValorR(int)</slot>
+    <slot>canviaValorG(int)</slot>
+    <slot>canviaValorB(int)</slot>
    </slots>
   </customwidget>
  </customwidgets>
@@ -292,11 +336,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>783</x>
-     <y>274</y>
+     <y>244</y>
     </hint>
     <hint type="destinationlabel">
      <x>603</x>
-     <y>306</y>
+     <y>276</y>
     </hint>
    </hints>
   </connection>
@@ -308,11 +352,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>603</x>
-     <y>306</y>
+     <y>276</y>
     </hint>
     <hint type="destinationlabel">
      <x>783</x>
-     <y>274</y>
+     <y>244</y>
     </hint>
    </hints>
   </connection>
@@ -324,7 +368,7 @@
    <hints>
     <hint type="sourcelabel">
      <x>783</x>
-     <y>274</y>
+     <y>244</y>
     </hint>
     <hint type="destinationlabel">
      <x>547</x>
@@ -340,7 +384,7 @@
    <hints>
     <hint type="sourcelabel">
      <x>603</x>
-     <y>306</y>
+     <y>276</y>
     </hint>
     <hint type="destinationlabel">
      <x>547</x>
@@ -355,8 +399,8 @@
    <slot>repModelPatr(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>682</x>
-     <y>188</y>
+     <x>772</x>
+     <y>158</y>
     </hint>
     <hint type="destinationlabel">
      <x>540</x>
@@ -371,8 +415,8 @@
    <slot>repModelLego(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>682</x>
-     <y>217</y>
+     <x>772</x>
+     <y>187</y>
     </hint>
     <hint type="destinationlabel">
      <x>547</x>
@@ -387,8 +431,8 @@
    <slot>repCameraPersp(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>600</x>
-     <y>368</y>
+     <x>772</x>
+     <y>338</y>
     </hint>
     <hint type="destinationlabel">
      <x>547</x>
@@ -403,8 +447,8 @@
    <slot>repCameraOrt(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>625</x>
-     <y>397</y>
+     <x>772</x>
+     <y>367</y>
     </hint>
     <hint type="destinationlabel">
      <x>547</x>
@@ -419,12 +463,28 @@
    <slot>repAngleX(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>626</x>
-     <y>536</y>
+     <x>666</x>
+     <y>517</y>
     </hint>
     <hint type="destinationlabel">
      <x>511</x>
      <y>563</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dial_2</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>widget</receiver>
+   <slot>repAngleY(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>772</x>
+     <y>517</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>545</x>
+     <y>580</y>
     </hint>
    </hints>
   </connection>
@@ -439,24 +499,8 @@
      <y>603</y>
     </hint>
     <hint type="destinationlabel">
-     <x>591</x>
-     <y>530</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>dial_2</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>widget</receiver>
-   <slot>repAngleY(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>711</x>
-     <y>520</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>545</x>
-     <y>580</y>
+     <x>666</x>
+     <y>517</y>
     </hint>
    </hints>
   </connection>
@@ -471,8 +515,104 @@
      <y>627</y>
     </hint>
     <hint type="destinationlabel">
-     <x>684</x>
-     <y>534</y>
+     <x>772</x>
+     <y>517</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_2</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>label_2</receiver>
+   <slot>setColorR(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>599</x>
+     <y>571</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>593</x>
+     <y>545</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_3</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>label_2</receiver>
+   <slot>setColorG(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>685</x>
+     <y>573</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>690</x>
+     <y>546</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_4</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>label_2</receiver>
+   <slot>setColorB(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>753</x>
+     <y>567</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>747</x>
+     <y>551</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_2</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>widget</receiver>
+   <slot>repColorR(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>581</x>
+     <y>585</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>534</x>
+     <y>650</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_3</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>widget</receiver>
+   <slot>repColorG(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>640</x>
+     <y>585</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>546</x>
+     <y>674</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_4</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>widget</receiver>
+   <slot>repColorB(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>723</x>
+     <y>578</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>533</x>
+     <y>693</y>
     </hint>
    </hints>
   </connection>
