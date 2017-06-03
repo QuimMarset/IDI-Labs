@@ -1,0 +1,11 @@
+
+Ex4 -> Canviar Homer per Patricio tenint en compte que la capsa de la escena nomes es considera la del patricio. Eliminem terra
+	(terra comentat el seu pintat)
+Ex5 -> Canviar el calcul de la viewMatrix de lookAt a angles Euler (Manera amb lookAt comentada en el codi)
+
+ex6 -> Implementar interaccio ratoli per moure la camera sobre l'esfera de visio. Moviment horitzonal i vertical
+
+
+Explicacio moviment ratoli-> La idea es que quan movem l'observador cap a la dreta de l'esfera l'angle de Y es va incrementant. Llavors matematicament es un gir anti-horari i per tant positiu. Pero com la hem de portar a la càmera d'origen girem en sentit invers i per tant es passa com a -angleY a la rotacio.
+
+Respecte a l'angle X la idea seria que al pujar cap a dalt incrementessim l'angle X. Pero com Qt té l'origen a dalt a l'esquerre en lloc de a baix a l'esquerre incrementem l'angle quan anem cap a baix. Per tant es un gir anti-horari i positiu. Com girem en sentit invers el passem com a -angleX a la rotació.

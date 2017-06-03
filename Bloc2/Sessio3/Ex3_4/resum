@@ -1,0 +1,4 @@
+
+Ex3-> Canviar la camera perspectiva per una ortogonal calculant els nous parametres de left, right ,bottom i top que defineixen el window
+
+Ex4-> Adaptar la crida de projectTransform() per evitar deformacions al canviar la mida de la finestra amb càmera ortogonal
