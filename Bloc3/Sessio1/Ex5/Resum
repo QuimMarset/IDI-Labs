@@ -1,0 +1,2 @@
+
+Ex5-> Fer que els parametres de llum siguin uniforms que vinguin de MyGLWidget i llavors podem passar directament la posició del focus en SCO multiplicant per la view que ara serà un atribut de la classe del widget.

@@ -1,0 +1,5 @@
+
+Ex1-> Fer el calcul de la il·luminacio seguint el model de Lambert. Per tant cal calcular la posicio del vertex i de la posicio del focus en SCO, a partir d'aquests dos calcular el vector L i normalitzar-lo.
+Llavors calcular la normal de la superficie en el punt en SCO i normalitzar-lo (fent ús de la normalMatrix). 
+
+!!!Com sempre tenir en compte que els vertex no es normalitzen i els vectors es normalitzen perquè el mètode els requereix així

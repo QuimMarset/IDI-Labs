@@ -1,0 +1,2 @@
+
+Ex2-> Canviar el calcul del color en un punt al FS provocant que les constants dels materials en el VS hi hagin noves variables out per arribar al FS. De la mateixa manera es fa out de les coordenades del vertex passades ja en SCO i de la normal també en SCO i de les coordenades del vertex en vec4 necessaries per calcular el vector de la direcció de l'observador respecte el punt. Ara els elements de il·luminació que ja eren uniforms s'utilitzen al FS.

@@ -1,0 +1,14 @@
+
+Ex2-> Fer el calcul de la il·luminacio seguint el model de Phong. Per tant cal calcular la posicio del vertex i de la posicio del focus en SCO, a partir d'aquests dos calcular el vector L i normalitzar-lo.
+Llavors calcular la normal de la superficie en el punt en SCO i normalitzar-lo (fent ús de la normalMatrix). 
+
+Finalment calcular la posicio del vertex en SCO com un vec4 i passar-li ja que calcularà el vector de la direcció de l'obervador respecte al punt (OBS en SCO es troba en el (0,0,0)) ja que phong utilitza reflexio difusa i per tant la posició de l'observador afecta.
+
+!!!Com sempre tenir en compte que els vertex no es normalitzen i els vectors es normalitzen perquè el mètode els requereix així
+
+
+Ex3-> Simplement canviar el color del terra que era magenta i convertir-lo en un blau brillant. Per això es canvia la component difusa i ambient del material del terra posant el valor rbg corresponent a blau i amb un valor elevat ja que determina també com el material reflecteix la llum difusa i l'ambient, tenint en compte que l'ambient sempre té un valor baix ja que és la que aporta menys realisme.
+Respecte a la component especular es posa alta i de color blanc i la n o shiningness es posa també a un valor alt que defineix la brillantor.
+
+
+Ex4-> canviar la posicio del focus de llum observant per tant com el color de certs punts del Patricio es torna fosc ja que es troba darrere del focus i també es veu com la taca especular dels ulls està mes a baix.

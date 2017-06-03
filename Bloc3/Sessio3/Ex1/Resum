@@ -1,0 +1,5 @@
+
+
+Ex1-> Canviar entre una posició de focus relativa a l'escena provocant que s'hagi d'aplicar una transformació multiplicant-la per la view per passar a SCO, i una posició de focus relativa a la càmera posant-la per tant a la mateixa posició de l'observador (0,0,0) i estan ja per tant en SCO. Això es fa amb interacció de teclat usant la tecla F.
+
+!!! Mateixa descripció que l'ex 1 de la Sessió 2 del mateix bloc. Ho vaig fer ja abans així que això es el mateix que l'exercici 2 de la Sessió 2.

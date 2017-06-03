@@ -1,0 +1,2 @@
+
+Ex5-> Fer que el focus es mogui en la direcció de l'eix x mitjançant les tecles K i L. Llavors la idea és a la interacció de teclat calcular la nova posició amb aquest valor de X que s'anirà incrementant o decrementant amb les tecles i passar de nou el uniform al vertex shader.
