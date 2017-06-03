@@ -1,6 +1,0 @@
-
-Ex4 -> Carrega el homer traient la casa
-
-Ex5 -> Amb tot igual que el 4 afegir rotacio de 45 graus al pulsar R
-
-Ex6 ->Afegir un terra al Homer i que no roti

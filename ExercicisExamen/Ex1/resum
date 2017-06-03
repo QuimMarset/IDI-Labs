@@ -1,0 +1,1 @@
+La idea es afegir a la escena un patricio sobre l'altre pero del revés de manera que els seus caps es toquin. Es vol camera perspectiva que al redimensionar no retalli i que es pugui interaccionar amb el ratoli canviant el valor dels angles d'euler.

@@ -77,7 +77,6 @@ class MyGLWidget : public QOpenGLWidget, protected QOpenGLFunctions_3_3_Core
     float rav;
     float zN, zF, dist;
     float angleCamera;
-    float l,r,b,t;
     bool modelSeleccionat; //1 Patricio 0 Legoman
     bool cameraSeleccionada; //1 perspectiva 0 ortogonal
     glm::vec3 OBS,VRP,UP;

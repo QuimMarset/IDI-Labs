@@ -114,7 +114,7 @@ void MyGLWidget::calculaParametres() {
   factorEscalat = 1.0f/(puntMaximCapsaModel.y - puntMinimCapsaModel.y);
 
 
-  radiEsfera = sqrt(pow(puntMaximCapsaEscena.x - puntMinimCapsaEscena.x,2) + pow(puntMaximCapsaEscena.y - puntMinimCapsaEscena.y,2) 
+  radiEsfera =  sqrt(pow(puntMaximCapsaEscena.x - puntMinimCapsaEscena.x,2) + pow(puntMaximCapsaEscena.y - puntMinimCapsaEscena.y,2) 
     + pow(puntMaximCapsaEscena.z - puntMinimCapsaEscena.z,2));
   radiEsfera = radiEsfera/2.0f;
 
@@ -123,20 +123,16 @@ void MyGLWidget::calculaParametres() {
 
 void MyGLWidget::iniCamera() {
 
-   dist = 2*radiEsfera;
+   dist = 2.0f*radiEsfera;
 
   //OBS = glm::vec3(0,0,dist);
   //VRP = glm::vec3(0,0,0);
   //UP = glm::vec3(0,1,0);
 
   zN = radiEsfera;
-  zF = 3*radiEsfera;
-  l = -radiEsfera;
-  r = radiEsfera;
-  b = -radiEsfera;
-  t = radiEsfera;
+  zF = 3.0f*radiEsfera;
   
-  rav = (float)width()/(float)height();
+  //rav = float(width())/float(height());
 
   projectTransform();
   viewTransform();
@@ -147,6 +143,11 @@ void MyGLWidget::iniCamera() {
 void MyGLWidget::projectTransform() {
 
   glm::mat4 project;
+  float l,r,b,t;
+  l = -radiEsfera;
+  r = radiEsfera;
+  b = -radiEsfera;
+  t = radiEsfera;
   
   if (rav >= 1.0f) {
     l = - rav * radiEsfera; //rav * hw = aw -> dividit per dos

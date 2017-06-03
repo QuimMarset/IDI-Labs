@@ -132,10 +132,7 @@ void MyGLWidget::iniCamera() {
   zF = 3*radiEsfera;
   angleCamera = asin(radiEsfera/dist);
   angleZoom = angleCamera;
-  /*l = -radiEsfera;
-  r = radiEsfera;
-  b = -radiEsfera;
-  t = radiEsfera;*/
+
   
   rav = (float)width()/(float)height();
 
@@ -150,15 +147,11 @@ void MyGLWidget::projectTransform() {
   glm::mat4 project;
   
   if (rav >= 1.0f) {
-    /*l = - rav * radiEsfera; //rav * hw = aw -> dividit per dos
-    r = rav * radiEsfera;
-    project = glm::ortho(l,r,b,t,zN,zF);*/
+  
     project = glm::perspective(2*angleZoom,rav,zN,zF);
   }
   else {
-    /*b = - radiEsfera/rav; //aw / rav = hw -> dividit per dos
-    t = radiEsfera/rav;
-    project = glm::ortho(l,r,b,t,zN,zF);*/
+    
     float angleNou = atan(tan(angleZoom)/rav);
     project = glm::perspective(2*angleNou,rav,zN,zF);
   }

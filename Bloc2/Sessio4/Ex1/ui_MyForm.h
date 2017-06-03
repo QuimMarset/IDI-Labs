@@ -94,7 +94,7 @@ public:
         sizePolicy2.setHeightForWidth(spinBox->sizePolicy().hasHeightForWidth());
         spinBox->setSizePolicy(sizePolicy2);
         spinBox->setMinimum(15);
-        spinBox->setMaximum(90);
+        spinBox->setMaximum(60);
         spinBox->setValue(30);
 
         verticalLayout_2->addWidget(spinBox);

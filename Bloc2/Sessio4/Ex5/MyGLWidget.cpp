@@ -211,10 +211,7 @@ void MyGLWidget::iniCamera() {
   zF = 3*radiEsfera;
   angleCamera = asin(radiEsfera/dist);
   angleZoom = angleCamera;
-  l = -radiEsfera;
-  r = radiEsfera;
-  b = -radiEsfera;
-  t = radiEsfera;
+  
   
   rav = (float)width()/(float)height();
 
@@ -242,6 +239,11 @@ void MyGLWidget::projectTransform() {
   }
 
   else {
+    float l,r,b,t;
+    l = -radiEsfera;
+    r = radiEsfera;
+    b = -radiEsfera;
+    t = radiEsfera;
     if (rav >= 1.0f) {
       l = - rav * radiEsfera; //rav * hw = aw -> dividit per dos
       r = rav * radiEsfera;

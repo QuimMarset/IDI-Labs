@@ -53,7 +53,7 @@ class MyGLWidget : public QOpenGLWidget, protected QOpenGLFunctions_3_3_Core
     float angleRotacio;
     float rav;
     float zN, zF, dist;
-    float l,r,b,t;
+    
     glm::vec3 OBS,VRP,UP;
     float radiEsfera;
     glm::vec3 puntMinimCapsaEscena,puntMaximCapsaEscena, puntMaximCapsaModel, puntMinimCapsaModel;
