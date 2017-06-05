@@ -427,6 +427,7 @@ void MyGLWidget::keyPressEvent(QKeyEvent* event)
         posZ += 0.5;
         angleGir += float(M_PI/8.0);
         viewTransform();
+        enviaParametresIlum();
       }
    
       break;
@@ -437,12 +438,14 @@ void MyGLWidget::keyPressEvent(QKeyEvent* event)
         posZ -= 0.5;
         angleGir -= float(M_PI/8.0);
         viewTransform();
+        enviaParametresIlum();
       }
       break;
     }
     case Qt::Key_C: {
       canviCamera = !canviCamera;
       iniCamera();
+      enviaParametresIlum();
     }
     default: event->ignore(); break;
   }
@@ -476,6 +479,7 @@ void MyGLWidget::mouseMoveEvent(QMouseEvent *e)
     angleY += (e->x() - xClick) * M_PI / 180.0;
     angleX += (e->y() - yClick) * M_PI/180.0;
     viewTransform ();
+    enviaParametresIlum();
   }
 
   xClick = e->x();
