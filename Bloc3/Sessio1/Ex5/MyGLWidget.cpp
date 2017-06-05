@@ -231,7 +231,7 @@ void MyGLWidget::enviaParametresIlum() {
 
   glm::vec3 colFocus = glm::vec3(0.8, 0.8, 0.8);
   glm::vec3 llumAmbient = glm::vec3(0.2, 0.2, 0.2);
-  glm::vec3 posFocus = glm::vec3(1, 1, 1);  // en SCA
+  glm::vec3 posFocus = glm::vec3(1, 0, 1);  // en SCA
 
   glm::vec3 posFocusSCO = glm::vec3(View*glm::vec4(posFocus,1.0));
 
